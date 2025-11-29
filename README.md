@@ -1,75 +1,259 @@
-Buscador de Letras de Músicas
+# 🎵 Buscador de Letras de Músicas - **LyricFinder**
 
-Uma aplicação simples e interativa desenvolvida em Python com Streamlit, que permite pesquisar letras de músicas informando o nome da banda/artista e o título da música. O projeto utiliza a API pública lyrics.ovh para obter as letras automaticamente.
+Aplicação desenvolvida em **Python + Streamlit**, permitindo buscar letras de músicas utilizando a API pública **Lyrics.ovh**.  
+Possui uma interface simples, intuitiva e rápida, permitindo ao usuário encontrar uma letra informando apenas o **nome da banda/artista** e o **título da música**.
 
-Demonstração da Interface
+---
 
-A aplicação exibe uma imagem ilustrativa no topo da página, localizada na pasta images/.
+## 📘 Descrição
 
- projeto/
- ├── images/
- │    └── fender-2409274_1280.jpg
- ├── venv/
- ├── app.py
- └── README.md
+O **LyricFinder** é uma aplicação que consome uma API externa para disponibilizar letras de músicas em tempo real.
 
-Tecnologias Utilizadas
+O fluxo funciona assim:
 
-Python 3
+1. O usuário digita o nome da **banda/artista**
+2. Digita o nome da **música**
+3. O sistema envia uma requisição HTTP à API
+4. A letra é exibida na tela — ou uma mensagem de erro caso não exista
 
-Streamlit
+O projeto foi criado com foco didático, aplicando conceitos de:
 
-Requests
+- Consumo de **APIs REST**
+- Interface com **Streamlit**
+- Tratamento de **requisições HTTP**
+- Estrutura simples e clara de aplicações Python
 
-API Lyrics.ovh
+---
 
-Funcionalidades
+## 🧩 Funcionalidades
 
-Campo de texto para digitar:
+### 1. **Entrada de Dados**
+- Campo para nome da banda/artista  
+- Campo para nome da música  
 
-Nome da banda/artista
+### 2. **Consulta Automática**
+- Botão para buscar a letra  
+- Requisições via **requests**  
+- Retorno direto da letra se encontrada  
 
-Nome da música
+### 3. **Exibição da Letra**
+- Exibição em formato de texto  
+- Mensagens de sucesso e erro com Streamlit  
 
-Botão de pesquisa
+### 4. **Interface Visual**
+- Imagem ilustrativa musical  
+  - Local: `images/fender-2409274_1280.jpg`
+- Título e interface estilizados com componentes Streamlit
 
-Consumo de API para obter a letra
+---
 
-Exibição da letra diretamente na tela
+## 📁 Estrutura do Projeto
 
-Mensagens de sucesso ou erro para melhor experiência do usuário
+LyricFinder/
+├── app.py # Arquivo principal da aplicação Streamlit
+├── README.md # Documentação do projeto
+│
+├── images/
+│ └── fender-2409274_1280.jpg # Imagem usada na interface
+│
+└── venv/ # Ambiente virtual (opcional)
 
-Como Executar o Projeto
-1️- Clone o repositório
-git clone https://github.com/seu-usuario/nome-do-repo.git
 
-2- Instale as dependências
+---
 
-Recomenda-se usar um ambiente virtual:
+## 📦 Requisitos
+
+Para executar o projeto, são necessários:
+
+- **Python 3.8+**
+- **Pip atualizado**
+- Bibliotecas:
+  - streamlit
+  - requests
+
+Instalação das dependências:
+
+
+---
+
+## 🚀 Instalação e Execução
+
+### **Passo 1 – Clonar o Projeto**
+
+git clone https://github.com/seu-usuario/LyricFinder.git
+
+
+### **Passo 2 – Criar Ambiente Virtual (Opcional)**
+
+python -m venv venv
+Ativar o ambiente virtual:
+
+#### Windows:
+venv\Scripts\activate
+
+shell
+Copiar código
+
+#### Linux/Mac:
+source venv/bin/activate
+
+markdown
+Copiar código
+
+### **Passo 3 – Instalar Dependências**
 
 pip install streamlit requests
 
-3- Execute o projeto
+markdown
+Copiar código
+
+### **Passo 4 – Executar a Aplicação**
+
 streamlit run app.py
 
-Como Funciona
+css
+Copiar código
 
-O app envia uma requisição GET para:
+O Streamlit abrirá automaticamente o navegador em:
 
-https://api.lyrics.ovh/v1/<banda>/<música>
+http://localhost:8501
 
+yaml
+Copiar código
 
-Se a API encontrar a letra, ela é exibida no Streamlit.
-Caso contrário, o usuário recebe uma mensagem de erro informando que a letra não foi encontrada.
+---
 
-Estrutura do Código (app.py)
+## 🧠 Arquivo Principal — `app.py`
 
-O arquivo principal contém:
+O arquivo contém:
 
-Função para consumir a API
+- Função que faz requisição à API (`Buscar_Letra()`)
+- Inputs de texto para banda e música
+- Botão para buscar
+- Exibição da letra ou mensagem de erro
+- Carregamento da imagem de abertura
 
-Configuração da interface com Streamlit
+Fluxo geral:
 
-Entrada de dados do usuário
+1. Usuário digita banda e música  
+2. O sistema chama a API:  
+https://api.lyrics.ovh/v1/<banda>/<musica>
 
-Tratamento da resposta e exibição da letra
+yaml
+Copiar código
+3. A API retorna JSON com a letra  
+4. A letra é exibida na tela
+
+---
+
+## 🌐 Estrutura da API
+
+API utilizada:
+
+https://api.lyrics.ovh/
+
+yaml
+Copiar código
+
+Endpoint principal:
+
+/v1/<artista>/<musica>
+
+makefile
+Copiar código
+
+Exemplo:
+
+https://api.lyrics.ovh/v1/Coldplay/Yellow
+
+css
+Copiar código
+
+Retorno esperado:
+
+```json
+{
+  "lyrics": "Look at the stars..."
+}
+🧱 Padrão de Código
+Funções separadas da interface
+
+Uso de requests.get()
+
+Validação do retorno da API
+
+Uso de componentes Streamlit:
+
+st.text_input()
+
+st.button()
+
+st.text()
+
+st.success()
+
+st.error()
+
+Estrutura organizada e simples
+
+🎧 Como Usar
+Digite o nome da banda
+
+Digite o nome da música
+
+Clique em Pesquisar
+
+A letra é exibida (se encontrada)
+
+⚠️ Limitações da API
+A API Lyrics.ovh é gratuita e possui limitações:
+
+Algumas letras podem estar incompletas
+
+Músicas menos conhecidas podem não ser encontradas
+
+A API pode ficar fora do ar
+
+Não fornece capa do álbum
+
+🔮 Melhorias Futuras
+Exibir capa do álbum usando outra API (Last.fm, Spotify, etc.)
+
+Histórico de pesquisas
+
+Tema claro/escuro
+
+Download da letra em TXT ou PDF
+
+Deploy na nuvem (Streamlit Cloud)
+
+🆘 Suporte
+Caso a aplicação não funcione:
+
+Verifique sua conexão
+
+Confirme se digitou banda e música corretamente
+
+Veja se as dependências estão instaladas
+
+Atualize o Streamlit
+
+Teste a API no navegador
+
+📄 Licença
+Projeto livre para fins educacionais, focado em:
+
+Consumo de APIs
+
+Python
+
+Streamlit
+
+Projetos simples e funcionais
+
+👨‍💻 Autor
+Projeto desenvolvido com foco em estudo e prática de desenvolvimento web.
+
+Versão: 1.0
+Ano: 2025
+Tecnologias: Python, Streamlit, Requests, Lyrics.ovh
