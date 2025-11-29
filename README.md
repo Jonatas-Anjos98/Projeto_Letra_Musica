@@ -1,19 +1,19 @@
-🎵 Buscador de Letras de Músicas
+Buscador de Letras de Músicas
 
 Uma aplicação simples e interativa desenvolvida em Python com Streamlit, que permite pesquisar letras de músicas informando o nome da banda/artista e o título da música. O projeto utiliza a API pública lyrics.ovh para obter as letras automaticamente.
 
-📸 Demonstração da Interface
+Demonstração da Interface
 
 A aplicação exibe uma imagem ilustrativa no topo da página, localizada na pasta images/.
 
-📁 projeto/
+ projeto/
  ├── images/
  │    └── fender-2409274_1280.jpg
  ├── venv/
  ├── app.py
  └── README.md
 
-🚀 Tecnologias Utilizadas
+Tecnologias Utilizadas
 
 Python 3
 
@@ -23,7 +23,7 @@ Requests
 
 API Lyrics.ovh
 
-🔍 Funcionalidades
+Funcionalidades
 
 Campo de texto para digitar:
 
@@ -39,17 +39,17 @@ Exibição da letra diretamente na tela
 
 Mensagens de sucesso ou erro para melhor experiência do usuário
 
-📦 Como Executar o Projeto
-1️⃣ Clone o repositório
+Como Executar o Projeto
+1️- Clone o repositório
 git clone https://github.com/seu-usuario/nome-do-repo.git
 
-2️⃣ Instale as dependências
+2- Instale as dependências
 
 Recomenda-se usar um ambiente virtual:
 
 pip install streamlit requests
 
-3️⃣ Execute o projeto
+3- Execute o projeto
 streamlit run app.py
 
 Como Funciona
