@@ -49,14 +49,12 @@ O projeto foi criado com foco didático, aplicando conceitos de:
 
 ## 📁 Estrutura do Projeto
 
-LyricFinder/
-├── app.py # Arquivo principal da aplicação Streamlit
-├── README.md # Documentação do projeto
-│
-├── images/
-│ └── fender-2409274_1280.jpg # Imagem usada na interface
-│
-└── venv/ # Ambiente virtual (opcional)
+Projeto_Letra_Musica/
+├── app.py<br>                 # Arquivo principal da aplicação Streamlit
+├── README.md<br>              # Documentação do projeto
+├── images/<br>
+│   └── fender-2409274_1280.jpg<br>  # Imagem usada na interface
+└── venv/                  # Ambiente virtual (opcional)
 
 
 ---
