@@ -49,11 +49,11 @@ O projeto foi criado com foco didático, aplicando conceitos de:
 
 ## 📁 Estrutura do Projeto
 
-Projeto_Letra_Musica/
-├── app.py<br>                 # Arquivo principal da aplicação Streamlit
-├── README.md<br>              # Documentação do projeto
+Projeto_Letra_Musica/<br> 
+├── app.py                # Arquivo principal da aplicação Streamlit<br> 
+├── README.md              # Documentação do projeto<br> 
 ├── images/<br>
-│   └── fender-2409274_1280.jpg<br>  # Imagem usada na interface
+│   └── fender-2409274_1280.jpg  # Imagem usada na interface<br> 
 └── venv/                  # Ambiente virtual (opcional)
 
 
